@@ -219,6 +219,26 @@ If your `/etc/init.d/jenkins` file fails to start Jenkins, edit the `/etc/defaul
 Here, "8081" was chosen but you can put another port available.
 ====
 
+==== Fedora
+
+Jenkins is available in the fedora repository, so you can install it using the `dnf` package manager.
+
+[source,bash]
+----
+sudo dnf update
+sudo dnf install jenkins
+----
+
+This package installation will install all the dependencies to get Jenkins set up.
+
+You can run the Jenkins service with `systemd`.
+
+[source,bash]
+----
+sudo systemctl enable --now  jenkins.service
+----
+
+The line above will immediately start the Jenkins service and will start the Jenkins service on subsequent boots 
 
 === Windows
 
